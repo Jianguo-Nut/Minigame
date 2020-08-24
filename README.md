@@ -3,7 +3,7 @@ a plugin for MCDReforged to start a minigame in your vanilla server
 
 
 一个在MCDReforged中使用的，用于在原版服务器中启动小游戏的插件
-
+于`MCDReforged0.9.5`中测试通过
 
 之前在生电服玩红石小游戏，pvp类的小游戏经常有人在不知不觉中破坏了机器和地形，影响到小游戏的正确进行，另外，赶到小游戏区一般也要不少时间，最近刚学了python三个礼拜，于是我突发奇想写了这么个玩意。
 
