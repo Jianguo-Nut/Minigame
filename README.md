@@ -10,7 +10,7 @@
 
 # 用法
 
-- 把它和[PlayerInfoAPI](https://github.com/TISUnion/PlayerInfoAPI)一起放入plugins并重启服务端(暂时还不能热重载，至少不能有玩家在线其实要热重载也不难，我懒得改罢了，等改天有时间再写)
+- 把它和[PlayerInfoAPI](https://github.com/TISUnion/PlayerInfoAPI)一起放入plugins并重启服务端(暂时还不能热重载，至少不能有玩家在线。其实要热重载也不难，我懒得改罢了，等改天有时间再写)
 - 在游戏内，输入`!!mg ?`来查看是否有运行中的小游戏。
 - 如果没有，由一位玩家前往小游戏机器，并输入`!!mg start`开启一场小游戏并记录传送点(该玩家所在位置)。
 - 此时，全服玩家可以输入`!!mg join`以加入小游戏，加入后，玩家会被传送至传送点并切换为冒险模式，不会误伤地形机器。
