@@ -11,10 +11,7 @@ mgz=0
 mgpos=0
 mgdim=0
 
-def on_player_joined(server, player):
-    f=open('./plugins/minigame/'+player,mode='w')
-    f.write('0|0|0|overworld|false')
-    f.close()  
+
 
 def on_load(server,old):
     server.add_help_message('!!mg ?', '查询现在是否有开启的小游戏')
@@ -71,7 +68,9 @@ def on_user_info(server,info):
      
     
     if info.content == '!!mg join' and mgstarted:
-        
+        f=open('./plugins/minigame/'+info.player,mode='w')
+        f.write('0|0|0|overworld|false')
+        f.close()
         f = open('./plugins/minigame/' + info.player , 'r')
         pinfo = f.read()
         pinfo = pinfo.replace('\n', '').replace('\r', '')
@@ -107,5 +106,6 @@ def on_user_info(server,info):
         f=open('./plugins/minigame/'+info.player,mode='w')
         f.write('0|0|0|overworld|false')
         f.close()
+        os.remove('./plugins/minigame/'+info.player)
         server.execute('execute at ' + info.player + ' in minecraft:' + xyz[3] + ' run tp ' + info.player + ' ' + xyz[0] + ' ' + xyz[1] + ' ' + xyz[2])
         server.execute('gamemode survival ' + info.player)
